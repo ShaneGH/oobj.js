@@ -110,8 +110,8 @@ oobj.compiler = (function () {
         to[name[i]] = append.value;
     }
        
-    compiler.prototype.compile = function() {
-        var root = {};
+    compiler.prototype.compile = function(root /* optional */) {
+        root = root || {};
         
         var ic = new innerCompiler(this.classes);
         ic.compile();
