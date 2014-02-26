@@ -110,8 +110,7 @@ oobj.object = (function () {
                 throw "Invalid class name. The class name is for debug purposes and can contain alphanumeric characters only";
             }
             
-            // Yui doesn't like eval
-            window["eval"]("\
+            eval("\
             function " + className + "() { this.constructor = childClass; }\
             " + className + ".prototype = this.prototype;\
             childClass.prototype = new " + className + "();");

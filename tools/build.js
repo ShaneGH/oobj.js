@@ -1,1 +1,1 @@
-window.oobjs = oobjs;
+window.oobj = oobj;

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+    <script src="../build/oobj-0.0.debug.js" type="text/javascript"></script> 
+    
+    
+    <script type="text/javascript">
+        var compiler = new oobj.compiler("ns");
+        
+        compiler.registerClass("ns.class2", "ns.class1", function(){ return function(){}});
+        compiler.registerClass("ns.class1", null, function(){ return function(){}});
+        
+        var ttt = compiler.compile();
+        
+    </script>
+    
+</body>
+</html>
